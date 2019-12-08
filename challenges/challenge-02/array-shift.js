@@ -1,8 +1,9 @@
-function arrayShift = (array, length) => {
+const arrayShift = (array, length) => {
   const output = [];
-  for(let i = 0; i < arr.length; i++) {
-    const index = (strings[2]);
-}};
+  for(let i = 0; i < array.length; i++) {
+    const index = (output[2]);
+    return index;
+  }};
 
 //I was hoping the (strings[2]) would indicate the middle of the array?
 
