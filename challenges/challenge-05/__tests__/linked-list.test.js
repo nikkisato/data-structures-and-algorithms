@@ -1,10 +1,21 @@
 const { LinkedList, Node } = require('../linked-list');
 
-describe('linked list', () => {
-  it('has no node', () => {
-    new Node({});
+describe('node', () => {
+
+  let node;
+
+  beforeEach(() => {
+    node = new Node('testing');
   });
-  expect().toEqual();
+  it('has a value', () => { 
+    expect(node.value).toEqual('testing');
+    it('has a next', () => {
+      expect(node.next).toEqual(null);
+    });
+  });
+
+
 });
+
 
 
