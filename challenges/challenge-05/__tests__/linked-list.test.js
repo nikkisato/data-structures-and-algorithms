@@ -44,7 +44,7 @@ describe('linked List', () => {
     expect(list.includes('me')).toEqual(true);
     expect(list.includes('out')).toEqual(true);
     expect(list.includes('check')).toEqual(true);
-    expect(list.includes('corgi')).toEqual(false);
+    expect(list.includes('legolas')).toEqual(false);
   });
 
   it('returns a string of values within the list with toString', () => {
@@ -52,6 +52,24 @@ describe('linked List', () => {
     expect(list.toString()).toEqual('out->me->check');
   });
 
+  it('adds a node to the end of the list with append', () => {
+    checkMeOut(); 
+    expect(list.toString()).toEqual('out->me->check');
+    list.append('corgi');
+    expect(list.toString()).toEqual('out->me->check->corgi');
+  });
+
+  it('inserts a node before a specified node value with insertBefore', () => {
+    checkMeOut();
+    list.insertBefore('me', 'corgi');
+    expect(list.toString()).toEqual('out->corgi->me->check');
+  });
+
+  it('inserts a node after a specified node value with insertAfter()', () => {
+    checkMeOut();
+    list.insertAfter('me', 'corgi');
+    expect(list.toString()).toEqual('out->me->corgi->check');
+  });
 
 });
 

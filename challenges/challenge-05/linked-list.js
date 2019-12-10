@@ -37,33 +37,34 @@ class LinkedList {
     return nodes.join('->');
   }
 
-  append(node) {
+  append(value) {
+    const node = new Node(value);
     let current = this.head;
-    while(current.next != null) {
-      current = current.next;}
+    while(current.next !== null) {
+      current = current.next;
+    }
     current.next = node;
   }
 
-  insertBefore(node, newNode) {
+  insertBefore(value, newValue) {
+    const node = new Node(newValue);
     let current = this.head;
-    while(current.next !== node) {
+    while(current.next.value !== value) {
       current = current.next;
     }
-    newNode.next = current.next;
-    current.next = newNode;
+    node.next = current.next;
+    current.next = node;
   }
 
-  insertAfter(node, newNode) {
+  insertAfter(value, newValue) {
+    const node = new Node(newValue);
     let current = this.head;
-    while(current.value != node) {
-      current = current.next;    }
-    newNode.next = current.next;
-    current.next = newNode;
+    while(current.value !== value) {
+      current = current.next;    
+    }
+    node.next = current.next;
+    current.next = node;
   }
-
-
-
-
 }
 
 module.exports = { LinkedList, Node };
