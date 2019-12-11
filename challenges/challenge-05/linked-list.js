@@ -65,8 +65,35 @@ class LinkedList {
     node.next = current.next;
     current.next = node;
   }
+
+  kthFromEnd(k) {
+    let counter = 0;
+    let current = this.head;
+    while(current.next !== null){
+      current = current.next;
+      counter++;
+    }
+    current = this.head;
+    for(let i = 0; i < counter - this.kthFromEnd; i++) {
+      current = current.head;
+    }
+    return current.value;
+  }
+
 }
 
 module.exports = { LinkedList, Node };
   
   
+//my attempt 
+// insertNumber(k, value) {
+//   const node = new Node(k);
+//   let current = this.head;
+//   while(current.value !== node) {
+//     current = current.next;
+//   }
+//   if(current.value !== value) {
+//     value === null;
+//   }
+//   return node;
+// }

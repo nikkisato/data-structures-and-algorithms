@@ -54,7 +54,7 @@ describe('linked List', () => {
 
   it('adds a node to the end of the list with append', () => {
     checkMeOut(); 
-    expect(list.toString()).toEqual('out->me->check');
+    // expect(list.toString()).toEqual('out->me->check');
     list.append('corgi');
     expect(list.toString()).toEqual('out->me->check->corgi');
   });
