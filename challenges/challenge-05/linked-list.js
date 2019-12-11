@@ -74,7 +74,7 @@ class LinkedList {
       counter++;
     }
     current = this.head;
-    for(let i = 0; i < counter - this.kthFromEnd; i++) {
+    for(let i = 0; i < counter - number; i++) {
       current = current.head;
     }
     return current.value;
