@@ -66,7 +66,7 @@ class LinkedList {
     current.next = node;
   }
 
-  kthFromEnd(k) {
+  kthFromEnd(number) {
     let counter = 0;
     let current = this.head;
     while(current.next !== null){

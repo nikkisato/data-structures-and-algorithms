@@ -71,6 +71,11 @@ describe('linked List', () => {
     expect(list.toString()).toEqual('out->me->corgi->check');
   });
 
+  it('kthFromEnd takes the value of k and returns a value', () => {
+    list.kthFromEnd('head -> [1] -> [3] -> [8] -> [2] -> X');
+    expect(list.toString()).toEqual('2');
+  });
+
 });
 
 
