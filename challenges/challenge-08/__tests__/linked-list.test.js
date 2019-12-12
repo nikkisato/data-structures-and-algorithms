@@ -76,6 +76,10 @@ describe('linked List', () => {
     expect(list.toString()).toEqual('2');
   });
 
+  it('zipped arrays', () => {
+    list
+  }
+
 });
 
 
