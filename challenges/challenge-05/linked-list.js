@@ -80,20 +80,27 @@ class LinkedList {
     return current.value;
   }
 
+zip(l1, l2) {
+   //declare a count called l1NodesUsed for l1 and l2NodesUsed for l2
+  //if l1's length is 0, return l2
+  //l2's length is 0, return l1
+  //otherwise, set l1s head as the head of the zip list.
+  //compare count to l2's length. If l2's length is exhausted, slice the remaining nodes off of it and add to zip list.
+  //iterate l1NodesUsed count
+  //set l2's head to the next node in the zip list
+  //compare count to l1's length. If l1's length is exhausted, slice the remaining nodes off of it and add to zip list. 
+  //repeat.
+
+  let l1NodesUsed = 0;
+  let l2NodesUsed = 0;
+  if (l1.length === 0) return l2;
+  if (l2.length === 0) return l1;
+  let l1.head = new Node();
+  l1.head.next = l2.head;
+}
+console.log(zip());
 }
 
 module.exports = { LinkedList, Node };
   
   
-//my attempt 
-// insertNumber(k, value) {
-//   const node = new Node(k);
-//   let current = this.head;
-//   while(current.value !== node) {
-//     current = current.next;
-//   }
-//   if(current.value !== value) {
-//     value === null;
-//   }
-//   return node;
-// }
