@@ -79,26 +79,20 @@ class LinkedList {
     }
     return current.value;
   }
+  MergeList(list1, list2) {
+    if(list1 == null) return list2;
+    if(list2 == null) return list1;
 
-zip(l1, l2) {
-   //declare a count called l1NodesUsed for l1 and l2NodesUsed for l2
-  //if l1's length is 0, return l2
-  //l2's length is 0, return l1
-  //otherwise, set l1s head as the head of the zip list.
-  //compare count to l2's length. If l2's length is exhausted, slice the remaining nodes off of it and add to zip list.
-  //iterate l1NodesUsed count
-  //set l2's head to the next node in the zip list
-  //compare count to l1's length. If l1's length is exhausted, slice the remaining nodes off of it and add to zip list. 
-  //repeat.
-
-  let l1NodesUsed = 0;
-  let l2NodesUsed = 0;
-  if (l1.length === 0) return l2;
-  if (l2.length === 0) return l1;
-  let l1.head = new Node();
-  l1.head.next = l2.head;
-}
-console.log(zip());
+    if(list1.data < list2.data) {
+      list1.next = MergeList(list1.next, list2);
+      return list1;
+    } else {
+      if(list1.data < list2.data) {
+        list1.next = MergeList(list1.next, list2);
+        return list1;
+      }
+    }
+  }
 }
 
 module.exports = { LinkedList, Node };
