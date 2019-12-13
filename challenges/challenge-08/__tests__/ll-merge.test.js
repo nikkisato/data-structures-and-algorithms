@@ -1,9 +1,11 @@
-const { LinkedList, Node } = require('../linked-list');
+const { LinkedList, Node } = require('../ll-merge');
+
 
 describe('node', () => {
   let node;
 
   beforeEach(() => {
+
     node = new Node('testing');
   });
   it('has a value', () => { 
@@ -77,11 +79,13 @@ describe('linked List', () => {
   });
 
   it('zipped arrays', () => {
-    list1 = [1,3,5,7,9];
-    list2 = [2,4,6,8,10];
+    const list1 = [1, 3, 5, 7, 9];
+    const  list2 = [2, 4, 6, 8, 10];
 
-    list.
-  }
+    list.MergeList(list1, list2);
+    expect().toEqual('');
+    
+  });
 
 });
 
