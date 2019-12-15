@@ -78,22 +78,33 @@ describe('linked List', () => {
     expect(list.toString()).toEqual('2');
   });
 
-  it('zipped arrays', () => {
-    const list1 = [1, 3, 5, 7, 9];
-    const  list2 = [2, 4, 6, 8, 10];
 
-    list.MergeList(list1, list2);
-    expect().toEqual('');
-    
-  });
 
 });
 
+describe('llmerge', () => {
+  let listOne;
+  let listTwo;
+
+  beforeEach(() => {
+    listOne = new LinkedList();
+    listTwo = new LinkedList();
+  });
+  
+  it('should merge two linked list', () => {
+    listOne.insert(1);
+    listOne.insert(2);
+    listOne.insert(3);
+    listTwo.insert(1);
+    listTwo.insert(2);
+    listTwo.insert(3);
+    
+    expect(MergeList(listOne, listTwo).toString()).toEqual('3 => 3 => 2 => 2 => 1 => 1');
+  });
 
 
 
 
-
-
+});
 
 
