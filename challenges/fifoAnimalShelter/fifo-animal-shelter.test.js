@@ -14,5 +14,4 @@ describe('Animal shelter queue', () => {
     expect(queue.last.value).toEqual('dog');
   });
 
-
 });
