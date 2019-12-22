@@ -10,7 +10,9 @@ class Node {
 class LinkedList {
   constructor(){
     this.head = null;
+    this.tail = null;
   }
+
   
   insert(value){
     const node = new Node(value, this.head);
@@ -79,8 +81,52 @@ class LinkedList {
     }
     return current.value;
   }
+
+  MergeList(list1, list2) {
+    if(list1 == null) return list2;
+    if(list2 == null) return list1;
+
+    if(list1.data < list2.data) {
+      list1.next = MergeList(list1.next, list2);
+      return list1;
+    } else {
+      if(list1.data < list2.data) {
+        list1.next = MergeList(list1.next, list2);
+        return list1;
+      }
+    }
+  }
+
 }
 
 module.exports = { LinkedList, Node };
   
   
+
+
+// mergeTwoLists(l1, l2) {
+//   var res = new Node();
+//   var curr = res;
+//   while(l1 !== null && l2 !== null) {
+//     if(l1.val <= l2.val) {
+//       // Set current node to l1 if less than or equal
+//       curr.next = l1;
+//       // Move l1's head to next
+//       l1 = l1.next;
+//     } else {
+//       // Else same case for l2
+//       curr.next = l2;
+//       l2 = l2.next;
+//     }
+//     // Move current to next
+//     curr = curr.next;
+//   }
+
+//   if(l1 !== null) {
+//     curr.next = l1;
+//   } else if(l2 !== null) {
+//     curr.next = l2;
+//   }
+
+//   return res.next;
+// }
