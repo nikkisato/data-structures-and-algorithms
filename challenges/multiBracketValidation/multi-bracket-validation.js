@@ -8,16 +8,17 @@ const multiBracketValidation = input => {
       return true;
     } return false;
 
-  if('(' === '(') {
-    input.match(')');
-    return true;
-  } else return false;
+    if('(' === '(') {
+      input.match(')');
+      return true;
+    } else return false;
 
-  if('[' === '[') {
-    input.match(']');
-    return true;
-  } else return false;
+    if('[' === '[') {
+      input.match(']');
+      return true;
+    } else return false;
 
+  }
 };
 //not sure how to fix this
  
