@@ -1,9 +1,11 @@
-const { LinkedList, Node } = require('../linked-list');
+const { LinkedList, Node } = require('../ll-merge');
+
 
 describe('node', () => {
   let node;
 
   beforeEach(() => {
+
     node = new Node('testing');
   });
   it('has a value', () => { 
@@ -76,13 +78,33 @@ describe('linked List', () => {
     expect(list.toString()).toEqual('2');
   });
 
+
+
 });
 
+describe('llmerge', () => {
+  let listOne;
+  let listTwo;
+
+  beforeEach(() => {
+    listOne = new LinkedList();
+    listTwo = new LinkedList();
+  });
+  
+  it('should merge two linked list', () => {
+    listOne.insert(1);
+    listOne.insert(2);
+    listOne.insert(3);
+    listTwo.insert(1);
+    listTwo.insert(2);
+    listTwo.insert(3);
+    
+    expect(MergeList(listOne, listTwo).toString()).toEqual('3 => 3 => 2 => 2 => 1 => 1');
+  });
 
 
 
 
-
-
+});
 
 
