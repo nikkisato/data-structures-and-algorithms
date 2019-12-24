@@ -5,19 +5,20 @@ const multiBracketValidation = input => {
   for(let i = 0; i < input.length; i++){
     if('{' === '{') {
       input.match('}');
-      return true
-  } else return false
+      return true;
+    } return false;
 
   if('(' === '(') {
     input.match(')');
     return true;
-  } else return false
+  } else return false;
 
   if('[' === '[') {
     input.match(']');
     return true;
-  } else return false
+  } else return false;
 
 };
+//not sure how to fix this
  
 module.exports = { multiBracketValidation };
